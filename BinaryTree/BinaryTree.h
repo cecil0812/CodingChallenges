@@ -75,10 +75,6 @@ private:
 				addNode(node->right, value, f);
 			}
 		}
-		/*else if (value == node->value)
-		{
-			// Some shit
-		}*/
 	}
 
 	void removeNode(Node* node)
