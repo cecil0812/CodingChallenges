@@ -22,7 +22,7 @@ int expandAroundCenter(const string& s, int left, int right);
 
 int main(int argc, char* argv[])
 {
-	string s = "abcdefggfedcbafuckyou";
+	string s = "abcdefggfedcbanoway";
 	//string s = "abacdgfdcaba";
 	//string s = "babad";
 	string r = longestPalindrome2(s);
