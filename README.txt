@@ -1,0 +1,3 @@
+This repo contains all my code for various coding challenges.  Some of it is sloppy, some of it is clean, it depends on what I was trying to learn that day.  For instance, the BinaryTree class (BinaryTree\BinaryTree.h) is really messy because I was trying to do some fancy iterator stuff with it.
+
+Only the C++ code is stored here, I used VS 2019 to code these and aside from the #pragmas (I think it only uses #prama once) in a few files it should compile anywhere.
