@@ -1,0 +1,1 @@
+This is just some simple stuff with Binary Trees.  BinaryTree.h contains some messy code from me attempting some things with iterators.  BinaryTreeMirror contains a lot of methods you would expect to be run on a Binary Tree, including the ability to mirror it around the root.
