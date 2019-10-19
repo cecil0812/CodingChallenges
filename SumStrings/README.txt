@@ -2,7 +2,7 @@ Sum strings
 
 Implement: string addNumbers(string a, string b);
 
-Note that a and b are both positive, real numbers (yes, can including decimal points).  They can both be arbitrarily long and indeed, are likely to NOT be the same length.
+Note that a and b are both positive, real numbers (yes, including decimal points).  They can both be arbitrarily long and indeed, are likely to NOT be the same length.
 
 Examples:
 
