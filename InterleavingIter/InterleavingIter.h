@@ -1,7 +1,6 @@
 #ifndef _InterleavingIter_H
 #define _InterleavingIter_H
 
-#include <iostream>
 #include <vector>
 
 using std::vector;
