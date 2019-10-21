@@ -37,6 +37,14 @@ it.AddIter(arr3.begin(), arr3.end());
 while (it.hasNext())
 {
 	cout << it.next() << " ";
-}
+} // prints 1 4 6 2 5 7 3 8 9
 
-// prints 1 4 6 2 5 7 3 8 9
+// next() should throw an exception if you call it passed the end of all iterators:
+try
+{
+	it.next();
+}
+catch (runtime_error ex)
+{
+	cout << ex.what << endl;
+}
