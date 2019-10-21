@@ -46,5 +46,5 @@ try
 }
 catch (runtime_error ex)
 {
-	cout << ex.what << endl;
+	cout << ex.what() << endl;
 }
