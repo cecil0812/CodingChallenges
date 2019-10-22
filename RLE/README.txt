@@ -50,7 +50,7 @@ What would be a better escape character? (attempt to reason this out before look
 
 
 
-Here is where a lot of candidates show that they don't know what a byte actually is and attempt to store a single bit on a the data stream.  Computers deal in whole bytes, we can't store a single bit without taking an entire byte anyway:
+Here is where a lot of candidates show that they don't know what a byte actually is and attempt to store a single bit on the data stream.  Computers deal in whole bytes, we can't store a single bit without taking an entire byte anyway:
 
 Bits:
 0 0 0 0 0 0 0 1 <-- one bit stored but stored as one byte in memory anyway so: 01
@@ -94,3 +94,26 @@ void rle_encode(const string& input, string& outputStr);
 void rle_decode(const string& input, string& outputStr);
 
 Try to write the byte one first.  If that is confusing, write the string one and figure out what is going on.
+
+
+Extra Extra credit:
+
+What happens if we have more than 255 bytes in a run?
+
+We can only store a max count of 255 in one byte.  If the data looks like this:
+
+FF ... FF (300 times)
+
+We can't store 300 in a single byte so what do we do? (attempt to reason this out before looking below)
+---------------------------------------------------------------------------------------------------------
+
+
+
+
+We break it up into pieces that fit into a single byte:
+
+FF ... FF (300 times) => FF FF FF 2D 2D FF
+
+(Note: 2D = 45 in hex, 300 - 255 = 45)
+
+We can still decode this according to our normal rules, it's only the encoder that needs to change to account for this.
