@@ -50,7 +50,9 @@ What would be a better escape character? (attempt to reason this out before look
 
 
 
-Here is where a lot of candidates show that they don't know what a byte actually is and attempt to store a single bit on the data stream.  Computers deal in whole bytes, we can't store a single bit without taking an entire byte anyway:
+Here is where a lot of candidates show that they don't know what a byte actually is and attempt to store a single bit on the data stream.  Computers deal in whole bytes*, we can't store a single bit without taking an entire byte anyway:
+
+*For the most part, just assume that any computer we care about here deals in whole bytes
 
 Bits:
 0 0 0 0 0 0 0 1 <-- one bit stored but stored as one byte in memory anyway so: 01
