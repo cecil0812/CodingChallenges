@@ -11,3 +11,6 @@ flowerBox is an array of booleans containing either true where a flower is plant
 Given the array and how many flowers to plant (number), return true or false if that many flowers can be planted.
 
 Additionally, what improvements might you make on this method?  Is boolean the best thing to return from it?
+
+
+This is a LinkedIn interview question.
