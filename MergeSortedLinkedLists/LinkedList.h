@@ -5,6 +5,7 @@
 #include <fstream>
 
 using std::ostream;
+using std::istream;
 using std::endl;
 
 
@@ -115,15 +116,27 @@ public:
 		}
 	}
 
-	void printToStream(ostream& stream)
+	friend ostream& operator<<(ostream& os, const LinkedList& l)
 	{
-		Node* curNode = this->root;
+		Node* curNode = l.root;
 
 		while (curNode != NULL)
 		{
-			stream << curNode->value << endl;
+			os << curNode->value << endl;
 			curNode = curNode->next;
 		}
+
+		return os;
+	}
+
+	friend istream& operator>>(istream& os, LinkedList& l)
+	{
+		int temp = -1;
+		os >> temp;
+		l.addNode(temp);
+
+		return os;
 	}
 };
+
 #endif

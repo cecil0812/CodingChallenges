@@ -7,6 +7,7 @@ Input: 1->2->4, 1->3->4
 Output: 1->1->2->3->4->4
 */
 #include <iostream>
+#include <fstream>
 #include "LinkedList.h"
 
 using namespace std;
@@ -16,6 +17,10 @@ void cleanup(Node* node);
 
 int main(int argc, char* argv[])
 {
+	ofstream file("somefile.txt");
+	file << "Do stuff";
+
+
 	LinkedList l1;
 	l1.addNode(1);
 	l1.addNode(2);
@@ -31,17 +36,23 @@ int main(int argc, char* argv[])
 
 	l1.mergeTwoLists(l1, l2, l3);
 
-	l3.printToStream(cout);
+	cout << l3 << endl;
 
 	cout << endl;
 
+	LinkedList l5;
+	cin >> l5;
+	cin >> l5;
+	cin >> l5;
+
 	LinkedList l4;
 	l4.root = mergeTwoListsNodeWise(l1.root, l2.root);
-	l4.printToStream(cout);
+	cout << l4;
 
 	// We have to manually clean up because our destructor won't work anymore.
 	cleanup(l1.root);
 	cleanup(l3.root);
+	cleanup(l5.root);
 	
 	// This list is (mostly) destroyed above.
 	// Deleting this list, results in the destruction of list4.
