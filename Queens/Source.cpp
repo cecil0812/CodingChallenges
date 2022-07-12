@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 
 bool isUnGuarded(int boardSize, int x, int y, const vector<QueenConfig>& config)
 {
-	for (int index = 0; index < config.size(); ++index)
+	for (size_t index = 0; index < config.size(); ++index)
 	{
 		if (config[index].x == x)
 		{
