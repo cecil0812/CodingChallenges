@@ -9,7 +9,7 @@ struct QueenConfig
 	int y;
 };
 
-bool isUnguarded(int boardSize, int x, int y, const vector<QueenConfig>& config);
+bool isUnGuarded(int boardSize, int x, int y, const vector<QueenConfig>& config);
 void addQueen(int x, int y, vector<QueenConfig>& config);
 bool solveFromConfig(int boardSize, vector<QueenConfig>& config);
 void removeQueen(int x, int y, vector<QueenConfig>& config);
