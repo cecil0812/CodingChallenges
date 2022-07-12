@@ -40,6 +40,7 @@ bool isUnGuarded(int boardSize, int x, int y, const vector<QueenConfig>& config)
 			return false;
 		}
 
+		// We are basically making an X here and checking if we can capture in that X.
 		// Forward diagonal
 		int xDir = x + 1;
 		int yDir = y + 1;
