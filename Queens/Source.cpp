@@ -72,7 +72,7 @@ bool isUnGuarded(int boardSize, int x, int y, const vector<QueenConfig>& config)
 
 		xDir = x - 1;
 		yDir = y + 1;
-		while (xDir < boardSize && yDir < boardSize)
+		while (xDir >= 0 && yDir < boardSize)
 		{
 			if (config[index].x == xDir
 				&& config[index].y == yDir)
@@ -86,7 +86,7 @@ bool isUnGuarded(int boardSize, int x, int y, const vector<QueenConfig>& config)
 
 		xDir = x + 1;
 		yDir = y - 1;
-		while (xDir < boardSize && yDir < boardSize)
+		while (xDir < boardSize && yDir >= 0)
 		{
 			if (config[index].x == xDir
 				&& config[index].y == yDir)
