@@ -18,7 +18,7 @@ void removeQueen(int x, int y, vector<QueenConfig>& config);
 int main(int argc, char* argv[])
 {
 	// Board is considered to be square
-	int boardSize = 4;
+	int boardSize = 8;
 	vector<QueenConfig> config;
 
 	solveFromConfig(boardSize, config);
@@ -55,7 +55,7 @@ bool isUnGuarded(int boardSize, int x, int y, const vector<QueenConfig>& config)
 			++yDir;
 		}
 
-		//Backward diagonal
+		//Backward diagonal x
 		xDir = x - 1;
 		yDir = y - 1;
 		while (xDir >= 0 && yDir >= 0)
@@ -67,6 +67,34 @@ bool isUnGuarded(int boardSize, int x, int y, const vector<QueenConfig>& config)
 			}
 			
 			--xDir;
+			--yDir;
+		}
+
+		xDir = x - 1;
+		yDir = y + 1;
+		while (xDir < boardSize && yDir < boardSize)
+		{
+			if (config[index].x == xDir
+				&& config[index].y == yDir)
+			{
+				return false;
+			}
+
+			--xDir;
+			++yDir;
+		}
+
+		xDir = x + 1;
+		yDir = y - 1;
+		while (xDir < boardSize && yDir < boardSize)
+		{
+			if (config[index].x == xDir
+				&& config[index].y == yDir)
+			{
+				return false;
+			}
+
+			++xDir;
 			--yDir;
 		}
 	}
